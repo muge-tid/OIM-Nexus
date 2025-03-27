@@ -1,0 +1,97 @@
+@use '@angular/material' as mat;
+@import '@elemental-ui/core/src/styles/_palette.scss';
+
+:host {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.imx-tile-content {
+  height: 100%;
+  margin-top: 10px;
+  overflow-y: auto;
+}
+
+.imx-flex-header {
+  display: flex;
+  padding: 6px 18px;
+}
+
+.imx-flex-header > div {
+  flex: 0 0 auto;
+  line-height: 40px;
+}
+
+.imx-flex-header .imx-generic-tile-caption {
+  flex: 1 1 auto;
+  text-align: left;
+  overflow: hidden;
+  line-height: 40px;
+}
+
+.imx-generic-tile-caption h1 {
+  font-size: 1.15em;
+  font-weight: 600;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+}
+
+.imx-generic-tile-caption h1 mat-icon {
+  font-size: 1.2em;
+  margin-right: 8px;
+  color: mat.get-color-from-palette(mat.$gray-palette, 600);
+}
+
+.mat-button {
+  text-transform: uppercase;
+  margin-right: -16px;
+}
+
+.imx-generic-tile-caption h4 {
+  font-size: small;
+  line-height: 1.2em;
+  margin-top: -8px;
+  color: $black-9;
+}
+
+/* Footer */
+.imx-flex-footer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+}
+
+
+// Below codes are useless for now
+
+/* Toggle Button */
+/*
+.toggle-button {
+  background-color: transparent;
+  border: none;
+  color: mat.get-color-from-palette(mat.$gray-palette, 700);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+*/
+/*
+.toggle-button mat-icon {
+  margin-right: 5px;
+  color: red;
+}
+*/
+
+
+/* Dark Mode */
+
+/*
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+*/

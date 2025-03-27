@@ -1,0 +1,26 @@
+<h2 class="mat-headline">
+  <span>{{ '#LDS#Heading Identities without Managers' | translate }}</span>
+</h2>
+
+<mat-card>
+
+  <imx-data-source-toolbar
+    #dst
+    data-imx-identifier="ccc-users-without-managers-dst"
+    [settings]="dstSettings"
+    (navigationStateChanged)="onNavigationStateChanged($event)"
+    data-imx-identifier="ccc-users-without-managers-data-source-toolbar">
+  </imx-data-source-toolbar>
+
+  <div class="ccc-users-without-managers-table">
+    <imx-data-table data-imx-identifier="ccc-users-without-managers-table" 
+    [dst]="dst" 
+    (highlightedEntityChanged)="onHighlightedEntityChanged($event)" 
+    [detailViewVisible]="false"
+    [groupData]="groupData" 
+    data-imx-identifier="ccc-users-without-managers-table">
+    </imx-data-table>
+  </div>
+</mat-card>
+
+

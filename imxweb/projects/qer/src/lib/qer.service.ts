@@ -63,6 +63,7 @@ export class QerService {
 
   /** This method defines the menu structure for the portal. */
   private setupMenu(): void {
+    this.menuService.addMenuFactories(
     // this.menuService.addMenuFactories(
     //   //TODO later #206706
     //   (preProps: string[], __: string[]) => {
@@ -79,5 +80,36 @@ export class QerService {
     //     };
     //   }
     // );
-  }
+    
+      (preProps: string[], __: string[]) => {  
+        return {
+
+          id: 'ROOT_RelatedApplications',
+          title: '#LDS#Homework',
+          sorting: '100',
+          items: [
+
+            {
+              id : 'Example_UsersWithoutManagers',
+              route : 'users-without-managers',
+              title : '#LDS#Identities without managers'
+            },
+
+            {
+              id : 'Example_UsersByDepartments',
+              route : 'users-by-departments',
+              title : '#LDS#Users by Departments'
+            },
+
+            {
+              id : 'Example_UsersByManagers',
+              route : 'users-by-managers',
+              title : '#LDS#Users by Managers'
+            },
+
+            ]
+        };
+      }
+    );
+  }    
 }

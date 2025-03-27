@@ -1,0 +1,44 @@
+<imx-tile *ngIf="viewReady" 
+  data-imx-identifier="identites-by-managers-tile" 
+  [identifier]="'identities-by-managers'"
+  [size]="'Dashboard'" 
+  [contentType]="'Container'" 
+  [ngClass]="{'dark-mode': darkMode}" 
+  (actionClick)="openIdentitiesOverview()">
+
+  <ng-template #CaptionTemplate>
+    <div class="imx-flex-header">
+      <!-- User Icon + Heading -->
+      <div data-imx-identifier="tile-div-caption-container" class="imx-generic-tile-caption">
+        <h1 data-imx-identifier="tile-h1-caption">
+          <mat-icon class="imx-tile-icon">person</mat-icon>
+          <span>{{'#LDS#Filter Employees by Managers' | translate}}</span>
+        </h1>
+        <h4 data-imx-identifier="tile-h4-caption">
+          {{'#LDS#View employees.' | translate}}
+        </h4>
+      </div>
+
+      <!-- View Button -->
+      <div class="imx-mobile-nomobile">
+        <button mat-button color="primary" 
+          (click)="openIdentitiesOverview()">
+          <mat-icon>visibility</mat-icon> 
+          <span>{{'#LDS#View' | translate}}</span>
+        </button>
+      </div>
+    </div>
+    
+  </ng-template>
+
+  <div class="imx-tile-content"></div>
+
+  <!--
+  <div class="imx-flex-footer">
+    <button mat-button class="toggle-button" (click)="toggleDarkMode()">
+      <mat-icon color="warn">{{ darkMode ? 'favorite' : 'favorite_border' }}</mat-icon> 
+      <span>Toggle Mode</span>
+    </button>
+  </div>
+-->
+</imx-tile>

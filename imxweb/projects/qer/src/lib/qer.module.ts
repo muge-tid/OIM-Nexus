@@ -61,6 +61,11 @@ import { TilesModule } from './tiles/tiles.module';
 import { UserModule } from './user/user.module';
 import { ShoppingCartValidationDetailModule } from './shopping-cart-validation-detail/shopping-cart-validation-detail.module';
 import { RoleMembershipsModule } from './role-management/role-memberships/role-memberships.module';
+import { UsersWithoutManagersComponent } from './training/users-without-managers/users-without-managers.component';
+import { TrainingModule } from './training/training.module';
+import { UsersByDepartmentsComponent } from './training/users-by-departments/users-by-departments.component';
+import { UsersByManagersComponent } from './training/users-by-managers/users-by-managers.component';
+import { NexusModule } from './nexus/nexus.module';
 
 export function initConfig(config: QerService): () => Promise<any> {
   return () =>
@@ -79,7 +84,22 @@ const routes: Routes = [
     canActivate: [RouteGuardService],
     resolve: [RouteGuardService],
   },
+
+  {
+    path: 'users-without-managers',
+    component: UsersWithoutManagersComponent,
+    canActivate: [RouteGuardService],
+    resolve: [RouteGuardService],
+  },
+
+  {
+    path: 'users-by-departments',
+    component: UsersByDepartmentsComponent,
+    canActivate: [RouteGuardService],
+    resolve: [RouteGuardService],
+  },
 ];
+
 
 // @dynamic
 @NgModule({
@@ -113,6 +133,8 @@ const routes: Routes = [
     FkAdvancedPickerModule,
     OpsModule,
     DataExplorerViewModule,
+    TrainingModule,
+    NexusModule,
   ],
   exports: [PasscodeViewerComponent, ObjectOverviewPersonComponent],
   providers: [

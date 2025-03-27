@@ -1,0 +1,29 @@
+<h2 class="mat-headline">
+    <span>{{ '#LDS#Heading Identities by Managers' | translate }}</span>
+  </h2>
+  
+  <mat-card>
+    <imx-data-source-toolbar
+      #dst
+      data-imx-identifier="ccc-users-by-managers-dst"
+      [settings]="dstSettings"
+      [options]="['search', 'filter']"
+      (navigationStateChanged)="onNavigationStateChanged($event)"
+      (search)="onSearch($event)"
+      data-imx-identifier="ccc-users-by-managers-data-source-toolbar"
+    >
+    </imx-data-source-toolbar>
+    <div class="ccc-users-by-managers-table">
+      <imx-data-table
+        data-imx-identifier="ccc-users-by-managers-table"
+        [dst]="dst"
+        (highlightedEntityChanged)="onHighlightedEntityChanged($event)"
+        [detailViewVisible]="false"
+        [groupData]="groupData"
+        data-imx-identifier="ccc-users-by-managers-table"
+      >
+      </imx-data-table>
+    </div>
+    <imx-data-source-paginator data-imx-identifier="ccc-users-by-managers-paginator" [dst]="dst"></imx-data-source-paginator>
+  </mat-card>
+  

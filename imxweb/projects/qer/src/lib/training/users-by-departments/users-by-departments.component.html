@@ -1,0 +1,29 @@
+<h2 class="mat-headline">
+    <span>{{ '#LDS#Heading Identities by Departments' | translate }}</span>
+  </h2>
+  
+  <mat-card>
+    <imx-data-source-toolbar
+      #dst
+      data-imx-identifier="ccc-users-by-departments-dst"
+      [settings]="dstSettings"
+      [options]="['search', 'filter']"
+      (navigationStateChanged)="onNavigationStateChanged($event)"
+      (search)="onSearch($event)"
+      data-imx-identifier="ccc-users-by-departments-data-source-toolbar"
+    >
+    </imx-data-source-toolbar>
+    <div class="ccc-users-by-departments-table">
+      <imx-data-table
+        data-imx-identifier="ccc-users-by-departments-table"
+        [dst]="dst"
+        (highlightedEntityChanged)="onHighlightedEntityChanged($event)"
+        [detailViewVisible]="false"
+        [groupData]="groupData"
+        data-imx-identifier="ccc-users-by-departments-table"
+      >
+      </imx-data-table>
+    </div>
+    <imx-data-source-paginator data-imx-identifier="ccc-users-by-departments-paginator" [dst]="dst"></imx-data-source-paginator>
+  </mat-card>
+  

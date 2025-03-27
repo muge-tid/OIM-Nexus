@@ -156,3 +156,14 @@ export { FeatureConfigService } from './lib/admin/feature-config.service';
 export { ItshopRequest } from './lib/request-history/itshop-request';
 export { RequestParameterDataEntity } from './lib/itshop/request-info/request-parameter-data-entity.interface';
 export { BaseTreeRoleRestoreHandler } from './lib/role-management/restore/restore-handler';
+
+// Custom Exports 
+
+export {TrainingModule} from './lib/training/training.module';
+export {UsersWithoutManagersComponent} from './lib/training/users-without-managers/users-without-managers.component';
+export {UsersByDepartmentsComponent} from './lib/training/users-by-departments/users-by-departments.component';
+export {DepartmentService} from './lib/training/users-by-departments/department.service';
+export {UsersByManagersComponent} from './lib/training/users-by-managers/users-by-managers.component';
+export {ManagersService} from './lib/training/users-by-managers/managers.service';
+export {NexusModule} from './lib/nexus/nexus.module';
+export {ManagerTileComponent} from './lib/nexus/manager-tile/manager-tile.component';

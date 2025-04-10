@@ -40,12 +40,6 @@
   align-items: center;
 }
 
-.imx-generic-tile-caption h1 mat-icon {
-  font-size: 1.2em;
-  margin-right: 8px;
-  color: mat.get-color-from-palette(mat.$gray-palette, 600);
-}
-
 .mat-button {
   text-transform: uppercase;
   margin-right: -16px;
@@ -55,7 +49,6 @@
   font-size: small;
   line-height: 1.2em;
   margin-top: -8px;
-  color: $black-9;
 }
 
 /* Footer */
@@ -65,6 +58,10 @@
   padding: 10px;
 }
 
+.color-gray-30 {
+  color: mat.get-color-from-palette(mat.$gray-palette, 500);
+  fill: mat.get-color-from-palette(mat.$gray-palette, 500);
+}
 
 // Below codes are useless for now
 

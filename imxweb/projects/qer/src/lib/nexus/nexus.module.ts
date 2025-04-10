@@ -28,7 +28,8 @@ import { TileModule } from 'qbm';
     MatCardModule,
     MatTooltipModule,
     EuiCoreModule,
-    MatIconModule
+    MatIconModule,
+ 
   ],
   exports: [
     ManagerTileComponent

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { OverlayRef } from '@angular/cdk/overlay';
 import { Router } from '@angular/router';
-import { EuiLoadingService } from '@elemental-ui/core';
+import { EuiLoadingService} from '@elemental-ui/core';
 import { ProjectConfig } from 'imx-api-qer';
 import { ProjectConfigurationService } from '../../project-configuration/project-configuration.service';
 
